@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Delete Recipe?</h1>
+    <form method="post" enctype="multipart/form-data">
+       {% csrf_token %}
+    <input class="btn btn-primary" type="submit" value="Submit">
+        <a class="btn" href="{% url 'home' %}" role="button">Cancel</a>
+</form>
+{% endblock %}
